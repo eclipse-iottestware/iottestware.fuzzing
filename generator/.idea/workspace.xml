@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6102bcf9-1c2f-4884-a832-bd8c829a8c27" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="BitHelperTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/de/fraunhofer/fokus/fuzzing/nmf/util/BitHelperTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="731">
+              <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BitHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/util/BitHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ByteHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/etsi/common/ByteHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="29" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FuzzedPduGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/generation/FuzzedPduGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestPduProvider.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/de/fraunhofer/fokus/fuzzing/nmf/testutil/TestPduProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FuzzedPduGeneratorTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/de/fraunhofer/fokus/fuzzing/nmf/generation/FuzzedPduGeneratorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="coap.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testdata/coap.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1513">
+              <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="coap_bytes.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testdata/coap_bytes.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2465">
+              <caret line="775" column="38" selection-start-line="775" selection-start-column="36" selection-end-line="775" selection-end-column="38" />
+              <folding>
+                <element signature="e#4#5949#0" />
+                <element signature="e#5956#11901#0" />
+                <element signature="e#11908#18726#0" />
+                <element signature="e#18733#25657#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>hexto</find>
+      <find>settimest</find>
+      <find>setMi</find>
+      <find>mid</find>
+      <find>if\(\!currentValue\.getClass\(\)\.isArray\(\)\) return\;\n</find>
+      <find>long</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/ByteHelper.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/CoapDataParser.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/PduTypeHandler.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/CodecWraper.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/coap/CoapCodecWraper.java" />
+        <option value="$PROJECT_DIR$/src/org/etsi/common/ByteHelper.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/ObjectTraverser.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/UpdateTrigger.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/traverser/IntegerExplorer.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/traverser/NumberExplorer.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/traverser/number/LongExplorer.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/traverser/number/IntegerExplorer.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/traverser/ArrayExplorer.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/coap/CoapTypeHandler.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/traverser/array/ArrayExplorer.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/traverser/number/NumberExplorer.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/TypeChooser.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/FieldType.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/TypeIdentificator.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/json/JsonPduMapper.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/traverser/ObjectTraverser.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/FieldDescription.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/Main.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/util/BitHelper.java" />
+        <option value="$PROJECT_DIR$/test/de/fraunhofer/fokus/fuzzing/nmf/util/BitHelperTest.java" />
+        <option value="$PROJECT_DIR$/testdata/singlePdu.json" />
+        <option value="$PROJECT_DIR$/test/de/fraunhofer/fokus/fuzzing/nmf/testutil/PduProvider.java" />
+        <option value="$PROJECT_DIR$/test/de/fraunhofer/fokus/fuzzing/nmf/testutil/TestPduProvider.java" />
+        <option value="$PROJECT_DIR$/test/de/fraunhofer/fokus/fuzzing/nmf/json/JsonPduMapperTest.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/generation/GeneratorProvider.java" />
+        <option value="$PROJECT_DIR$/test/de/fraunhofer/fokus/fuzzing/nmf/generation/GeneratorProviderTest.java" />
+        <option value="$PROJECT_DIR$/test/de/fraunhofer/fokus/fuzzing/nmf/generation/FuzzedPduGeneratorTest.java" />
+        <option value="$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/generation/FuzzedPduGenerator.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="761" />
+    <option name="y" value="212" />
+    <option name="width" value="1835" />
+    <option name="height" value="1315" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="NetworkMutationFuzzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetworkMutationFuzzer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetworkMutationFuzzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetworkMutationFuzzer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetworkMutationFuzzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetworkMutationFuzzer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="nmf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetworkMutationFuzzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetworkMutationFuzzer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="nmf" type="462c0819:PsiDirectoryNode" />
+              <item name="coap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetworkMutationFuzzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetworkMutationFuzzer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="nmf" type="462c0819:PsiDirectoryNode" />
+              <item name="generation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetworkMutationFuzzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetworkMutationFuzzer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="nmf" type="462c0819:PsiDirectoryNode" />
+              <item name="json" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetworkMutationFuzzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetworkMutationFuzzer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="nmf" type="462c0819:PsiDirectoryNode" />
+              <item name="pcap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetworkMutationFuzzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetworkMutationFuzzer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="nmf" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetworkMutationFuzzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetworkMutationFuzzer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetworkMutationFuzzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetworkMutationFuzzer" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetworkMutationFuzzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetworkMutationFuzzer" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="nmf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetworkMutationFuzzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetworkMutationFuzzer" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="nmf" type="462c0819:PsiDirectoryNode" />
+              <item name="generation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetworkMutationFuzzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetworkMutationFuzzer" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="nmf" type="462c0819:PsiDirectoryNode" />
+              <item name="json" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetworkMutationFuzzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetworkMutationFuzzer" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="nmf" type="462c0819:PsiDirectoryNode" />
+              <item name="testutil" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetworkMutationFuzzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetworkMutationFuzzer" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="nmf" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetworkMutationFuzzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetworkMutationFuzzer" type="462c0819:PsiDirectoryNode" />
+              <item name="testdata" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.JavaDocs" value="true" />
+    <property name="Repository.Attach.Sources" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="de.fraunhofer.fokus.fuzzing.nmf.generation" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dkn\ownCloud\CODE\NetworkMutationFuzzer\testdata" />
+      <recent name="C:\Users\dkn\ownCloud\CODE\NetworkMutationFuzzer\lib" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dkn\ownCloud\CODE\NetworkMutationFuzzer\src" />
+      <recent name="C:\Users\dkn\ownCloud\CODE\NetworkMutationFuzzer\testdata" />
+      <recent name="C:\Users\dkn\ownCloud\CODE\NetworkMutationFuzzer" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.FuzzedPduGeneratorTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="de.fraunhofer.fokus.fuzzing.nmf.Main" />
+      <module name="NetworkMutationFuzzer" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+    </configuration>
+    <configuration name="BitHelperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NetworkMutationFuzzer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.fraunhofer.fokus.fuzzing.nmf.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="de.fraunhofer.fokus.fuzzing.nmf.util" />
+      <option name="MAIN_CLASS_NAME" value="de.fraunhofer.fokus.fuzzing.nmf.util.BitHelperTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="FuzzedPduGeneratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NetworkMutationFuzzer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.fraunhofer.fokus.fuzzing.nmf.generation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="de.fraunhofer.fokus.fuzzing.nmf.generation" />
+      <option name="MAIN_CLASS_NAME" value="de.fraunhofer.fokus.fuzzing.nmf.generation.FuzzedPduGeneratorTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="GeneratorProviderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NetworkMutationFuzzer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.fraunhofer.fokus.fuzzing.nmf.generation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="de.fraunhofer.fokus.fuzzing.nmf.generation" />
+      <option name="MAIN_CLASS_NAME" value="de.fraunhofer.fokus.fuzzing.nmf.generation.GeneratorProviderTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="JsonPduMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NetworkMutationFuzzer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.fraunhofer.fokus.fuzzing.nmf.json.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="de.fraunhofer.fokus.fuzzing.nmf.json" />
+      <option name="MAIN_CLASS_NAME" value="de.fraunhofer.fokus.fuzzing.nmf.json.JsonPduMapperTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.JsonPduMapperTest" />
+      <item itemvalue="JUnit.BitHelperTest" />
+      <item itemvalue="JUnit.GeneratorProviderTest" />
+      <item itemvalue="JUnit.FuzzedPduGeneratorTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.FuzzedPduGeneratorTest" />
+        <item itemvalue="JUnit.GeneratorProviderTest" />
+        <item itemvalue="JUnit.JsonPduMapperTest" />
+        <item itemvalue="JUnit.BitHelperTest" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6102bcf9-1c2f-4884-a832-bd8c829a8c27" name="Default" comment="" />
+      <created>1517567137148</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1517567137148</updated>
+      <workItem from="1519206909282" duration="69252000" />
+      <workItem from="1520414408807" duration="4248000" />
+      <workItem from="1521462405041" duration="599000" />
+      <workItem from="1521714951608" duration="68000" />
+      <workItem from="1521715091101" duration="1290000" />
+      <workItem from="1522075801005" duration="968000" />
+      <workItem from="1522146080524" duration="5586000" />
+      <workItem from="1522833261496" duration="2518000" />
+      <workItem from="1530793382082" duration="617000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="FuzzedPduGeneratorTest - 2018.03.07 at 10h 28m 35s.xml">
+      <configuration name="FuzzedPduGeneratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FuzzedPduGeneratorTest - 2018.03.07 at 10h 33m 36s.xml">
+      <configuration name="FuzzedPduGeneratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FuzzedPduGeneratorTest - 2018.03.07 at 10h 34m 13s.xml">
+      <configuration name="FuzzedPduGeneratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FuzzedPduGeneratorTest - 2018.03.07 at 10h 55m 37s.xml">
+      <configuration name="FuzzedPduGeneratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FuzzedPduGeneratorTest - 2018.03.07 at 10h 56m 26s.xml">
+      <configuration name="FuzzedPduGeneratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GeneratorProviderTest - 2018.02.27 at 17h 55m 20s.xml">
+      <configuration name="GeneratorProviderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GeneratorProviderTest - 2018.02.27 at 17h 55m 43s.xml">
+      <configuration name="GeneratorProviderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GeneratorProviderTest - 2018.02.27 at 17h 57m 30s.xml">
+      <configuration name="GeneratorProviderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GeneratorProviderTest - 2018.02.27 at 17h 57m 48s.xml">
+      <configuration name="GeneratorProviderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GeneratorProviderTest - 2018.02.27 at 18h 01m 34s.xml">
+      <configuration name="GeneratorProviderTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="85146000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="609" y="170" width="1468" height="1052" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2829227" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32938188" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37428978" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.30926085" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32882354" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection Results" order="7" weight="0.32871288" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/traverser/array/ArrayExplorer.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="123" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/net/Inet4Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="100" column="4" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/californium-core-2.0.0-M7-sources.jar!/org/eclipse/californium/core/network/serialization/UdpDataSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/element-connector-2.0.0-M7-sources.jar!/org/eclipse/californium/elements/RawData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="143" column="22" selection-start-line="143" selection-start-column="22" selection-end-line="143" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/net/InetSocketAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="164" column="11" selection-start-line="164" selection-start-column="11" selection-end-line="164" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/element-connector-2.0.0-M7-sources.jar!/org/eclipse/californium/elements/AddressEndpointContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="39" column="51" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/californium-core-2.0.0-M7-sources.jar!/org/eclipse/californium/core/network/serialization/DataSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="129" column="17" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/californium-core-2.0.0-M7-sources.jar!/org/eclipse/californium/core/CoapHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/californium-core-2.0.0-M7-sources.jar!/org/eclipse/californium/core/CoapResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/UpdateTrigger.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/californium-core-2.0.0-M7-sources.jar!/org/eclipse/californium/core/coap/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="89" column="38" lean-forward="true" selection-start-line="89" selection-start-column="38" selection-end-line="89" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/traverser/number/LongExplorer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/CodecWrapper.java" />
+    <entry file="jar://$PROJECT_DIR$/lib/californium-core-2.0.0-M7-sources.jar!/org/eclipse/californium/core/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/californium-core-2.0.0-M7-sources.jar!/org/eclipse/californium/core/coap/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="973">
+          <caret line="77" column="53" selection-start-line="77" selection-start-column="53" selection-end-line="77" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="262" column="22" selection-start-line="262" selection-start-column="22" selection-end-line="262" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/traverser/number/IntegerExplorer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="3234" column="25" selection-start-line="3234" selection-start-column="25" selection-end-line="3234" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/reflect/Array.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="140" column="32" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/traverser/number/NumberExplorer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="58" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/coap/CoapTypeHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/traverser/array/ArrayExplorer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding>
+            <element signature="imports" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/coap/CoapCodecWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/dictionaries/dkn.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/jarRepositories.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/TypeChooser.java" />
+    <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/FieldType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/json/JsonPduMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1134">
+          <caret line="67" column="92" selection-start-line="67" selection-start-column="92" selection-end-line="67" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/traverser/ObjectTraverser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="191" column="14" selection-start-line="191" selection-start-column="14" selection-end-line="191" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/FieldDescription.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fuzzino.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/fuzzino.jar!/de/fraunhofer/fokus/fuzzing/fuzzino/request/RequestFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="69" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/fuzzino.jar!/de/fraunhofer/fokus/fuzzing/fuzzino/heuristics/generators/IntegerGenerator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/TypeIdentificator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="301" column="25" selection-start-line="301" selection-start-column="25" selection-end-line="301" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testdata/singlePdu.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10857">
+          <caret line="517" column="3" selection-start-line="517" selection-start-column="3" selection-end-line="517" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/de/fraunhofer/fokus/fuzzing/nmf/json/JsonPduMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/generation/GeneratorProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="51" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/de/fraunhofer/fokus/fuzzing/nmf/generation/GeneratorProviderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/de/fraunhofer/fokus/fuzzing/nmf/util/BitHelperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/util/BitHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/etsi/common/ByteHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testdata/coap.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testdata/coap_bytes.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2465">
+          <caret line="775" column="38" selection-start-line="775" selection-start-column="36" selection-end-line="775" selection-end-column="38" />
+          <folding>
+            <element signature="e#4#5949#0" />
+            <element signature="e#5956#11901#0" />
+            <element signature="e#11908#18726#0" />
+            <element signature="e#18733#25657#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/strategy/SingleFieldStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/de/fraunhofer/fokus/fuzzing/nmf/generation/FuzzedPduGeneratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/fraunhofer/fokus/fuzzing/nmf/generation/FuzzedPduGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/de/fraunhofer/fokus/fuzzing/nmf/testutil/TestPduProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>9.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>NetworkMutationFuzzer</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>org.eclipse.californium:californium-core:2.0.0-M7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,18 +1,19 @@
 package de.fraunhofer.fokus.fuzzing.nmf.generation;
 
-import de.fraunhofer.fokus.fuzzing.fuzzino.FuzzedValue;
 import de.fraunhofer.fokus.fuzzing.fuzzino.heuristics.ComputableFuzzingHeuristic;
 import de.fraunhofer.fokus.fuzzing.fuzzino.heuristics.generators.IntegerGenerator;
 import de.fraunhofer.fokus.fuzzing.fuzzino.heuristics.generators.IntegerGeneratorFactory;
 import de.fraunhofer.fokus.fuzzing.fuzzino.request.IntegerSpecification;
 import de.fraunhofer.fokus.fuzzing.fuzzino.request.RequestFactory;
-import de.fraunhofer.fokus.fuzzing.fuzzino.request.TypeSpecification;
 import de.fraunhofer.fokus.fuzzing.nmf.FieldDescription;
 import de.fraunhofer.fokus.fuzzing.nmf.PduDescription;
 import de.fraunhofer.fokus.fuzzing.nmf.util.BitHelper;
 
 import java.math.BigInteger;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class GeneratorProvider {
 
@@ -20,7 +21,7 @@ public class GeneratorProvider {
 
     /**
      * @param description
-     * @return Map of FildId to Generator
+     * @return Map of FieldId to Generator
      */
     public static Map<String, List<ComputableFuzzingHeuristic>> getFieldGeneratorMap(PduDescription description) {
         Map<String, List<ComputableFuzzingHeuristic>> map = new HashMap<>();

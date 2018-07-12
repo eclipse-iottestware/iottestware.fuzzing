@@ -19,7 +19,8 @@ class FuzzedValueProviderTest {
     @Test
     void generateByStrategy() {
         List<FuzzedValue> singlePduValues = TestValueProvider.getSinglePduValues();
-        Strategy strategy = new SingleFieldStrategy(TestPduProvider.getSinglePdu());
+        Strategy strategy = new SingleFieldStrategy();
+        strategy.init(TestPduProvider.getSinglePdu());
         FuzzedValueProvider valueProvider = new FuzzedValueProvider();
         valueProvider.generateByStrategy(strategy);
         Map<String,Integer> countKey = new HashMap<>();

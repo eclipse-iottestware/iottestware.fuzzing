@@ -15,8 +15,11 @@ public class SingleFieldStrategy implements Strategy {
     private Map<String, List<ComputableFuzzingHeuristic>> generator;
     private List<List<String>> strategy;
 
-    public SingleFieldStrategy(PduDescription description) {
-        this.description = description;
+    @Override
+    public void init(PduDescription pdu) {
+        this.generator = null;
+        this.strategy = null;
+        this.description = pdu;
     }
 
     @Override
@@ -25,7 +28,7 @@ public class SingleFieldStrategy implements Strategy {
             Map<String, List<ComputableFuzzingHeuristic>> generatorMap = getGeneratorMap();
             strategy = new ArrayList<>();
             for (FieldDescription field : description.getFields()) {
-                if(generatorMap.containsKey(field.getName())) {
+                if (generatorMap.containsKey(field.getName())) {
                     List<String> activeFields = new ArrayList<>();
                     activeFields.add(field.getName());
                     strategy.add(activeFields);

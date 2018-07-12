@@ -9,13 +9,10 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jnetpcap" level="project" />
-    <orderEntry type="library" name="org.eclipse.californium:californium-core:2.0.0-M7" level="project" />
     <orderEntry type="library" name="junit-jupiter-api-5.0.0" level="project" />
     <orderEntry type="library" name="junit-platform-commons-1.0.0" level="project" />
     <orderEntry type="library" name="gson-2.8.2" level="project" />
     <orderEntry type="library" name="slf4j-api-1.7.25-javadoc" level="project" />
-    <orderEntry type="library" name="element-connector-2.0.0-M7-javadoc" level="project" />
-    <orderEntry type="library" name="slf4j-api-1.7.25-javadoc (2)" level="project" />
     <orderEntry type="library" name="fuzzino" level="project" />
   </component>
 </module>

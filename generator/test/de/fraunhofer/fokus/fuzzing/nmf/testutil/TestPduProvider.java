@@ -1,15 +1,18 @@
 package de.fraunhofer.fokus.fuzzing.nmf.testutil;
 
 import de.fraunhofer.fokus.fuzzing.nmf.PduDescription;
+import de.fraunhofer.fokus.fuzzing.nmf.compilation.FuzzDataSetCompiler;
 import de.fraunhofer.fokus.fuzzing.nmf.json.JsonPduMapper;
 
 import java.util.List;
 
 public class TestPduProvider {
 
-    private final static String fileNameAll = "testdata/coap_bytes.json";
-    private final static String fileNameSingle = "testdata/singlePdu.json";
-    private final static String protocolPrefix = "coap";
+    public final static String fileNameAll = "testdata/coap_bytes.json";
+    public final static String fileNameSingle = "testdata/singlePdu.json";
+    public final static String protocolPrefix = "coap";
+    public final static String fileResult = "./testdata/coap_hex.txt";
+
 
 
     public static PduDescription getSinglePdu(){

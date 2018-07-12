@@ -8,6 +8,8 @@ import java.util.Map;
 
 public interface Strategy {
 
+    public void init(PduDescription pdu);
+
     public List<List<String>> getFieldCombinationList();
 
     public Map<String, List<ComputableFuzzingHeuristic>> getGeneratorMap();

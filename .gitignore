@@ -1,62 +1,62 @@
-.metadata
-tmp/
-bin/*
-!bin/createlink.sh
+**/.metadata
+**/tmp/
+**/bin/*
+**/!bin/createlink.sh
 
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.settings/
-.loadpath
-.recommenders
-.project
-.classpath
+**/*.tmp
+**/*.bak
+**/*.swp
+**/*~.nib
+**/local.properties
+**/.settings/
+**/.loadpath
+**/.recommenders
+**/.project
+**/.classpath
 
 # Titan
-.TITAN_properties
+**/.TITAN_properties
 
 # TDL
-.aird
-.tdl
+**/.aird
+**/.tdl
 
 # Logs
-*.log
+**/*.log
 
 # External tool builders
-.externalToolBuilders/
+**/.externalToolBuilders/
 
 # Locally stored "Eclipse launch configurations"
-*.launch
+**/*.launch
 
 # PyDev specific (Python IDE for Eclipse)
-*.pydevproject
+**/*.pydevproject
 
 # CDT-specific (C/C++ Development Tooling)
-.cproject
-compile
-*.o
+**/.cproject
+**/compile
+**/*.o
 
 # Californium
-Californium.properties
+**/Californium.properties
 
 # sbteclipse plugin
-.target
+**/.target
 
 # Tern plugin
-.tern-project
+**/.tern-project
 
 # TeXlipse plugin
-.texlipse
+**/.texlipse
 
 # Code Recommenders
-.recommenders/
-/ttcn3build/
-/bin/
+**/.recommenders/
+**//ttcn3build/
+**//bin/
 
-.cache/
-.cproject
+**/.cache/
+**/.cproject
 
 
 ### Intellij ###
@@ -64,54 +64,54 @@ Californium.properties
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/**/usage.statistics.xml
-.idea/**/dictionaries
-.idea/**/shelf
+**/.idea/**/workspace.xml
+**/.idea/**/tasks.xml
+**/.idea/**/usage.statistics.xml
+**/.idea/**/dictionaries
+**/.idea/**/shelf
 
 # Sensitive or high-churn files
-.idea/**/dataSources/
-.idea/**/dataSources.ids
-.idea/**/dataSources.local.xml
-.idea/**/sqlDataSources.xml
-.idea/**/dynamic.xml
-.idea/**/uiDesigner.xml
-.idea/**/dbnavigator.xml
+**/.idea/**/dataSources/
+**/.idea/**/dataSources.ids
+**/.idea/**/dataSources.local.xml
+**/.idea/**/sqlDataSources.xml
+**/.idea/**/dynamic.xml
+**/.idea/**/uiDesigner.xml
+**/.idea/**/dbnavigator.xml
 
 # Gradle
-.idea/**/gradle.xml
-.idea/**/libraries
+**/.idea/**/gradle.xml
+**/.idea/**/libraries
 
 # CMake
-cmake-build-*/
+**/cmake-build-*/
 
 # Mongo Explorer plugin
-.idea/**/mongoSettings.xml
+**/.idea/**/mongoSettings.xml
 
 # File-based project format
-*.iws
+**/*.iws
 
 # IntelliJ
-out/
+**/out/
 
 # mpeltonen/sbt-idea plugin
-.idea_modules/
+**/.idea_modules/
 
 # JIRA plugin
-atlassian-ide-plugin.xml
+**/atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
-.idea/replstate.xml
+**/.idea/replstate.xml
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
-com_crashlytics_export_strings.xml
-crashlytics.properties
-crashlytics-build.properties
-fabric.properties
+**/com_crashlytics_export_strings.xml
+**/crashlytics.properties
+**/crashlytics-build.properties
+**/fabric.properties
 
 # Editor-based Rest Client
-.idea/httpRequests
+**/.idea/httpRequests
 
 ### Intellij Patch ###
 # Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
@@ -122,19 +122,19 @@ fabric.properties
 # *.ipr
 
 # Sonarlint plugin
-.idea/sonarlint
+**/.idea/sonarlint
 
 ### NetBeans ###
-nbproject/private/
-build/
-nbbuild/
-dist/
-nbdist/
-.nb-gradle/
+**/nbproject/private/
+**/build/
+**/nbbuild/
+**/dist/
+**/nbdist/
+**/.nb-gradle/
 
 ### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+**/.vscode/*
+**/!.vscode/settings.json
+**/!.vscode/tasks.json
+**/!.vscode/launch.json
+**/!.vscode/extensions.json

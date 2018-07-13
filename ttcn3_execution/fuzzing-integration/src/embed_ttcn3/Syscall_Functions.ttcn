@@ -1,0 +1,5 @@
+module Syscall_Functions {
+
+	external function f_sysCall(charstring pl_call) return charstring;
+
+}

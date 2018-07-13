@@ -1,0 +1,18 @@
+module Hexreader_Functions {
+	
+    external function f_readFile(charstring pl_path) return boolean;
+	external function f_hasLine() return boolean;
+	external function f_readLine() return charstring;
+	external function f_closeFile() return boolean;
+	
+	function f_readOctLine()
+	return octetstring
+	{
+      var charstring line := f_readLine();
+      var octetstring oct := str2oct(line);
+      return oct;
+      
+	}
+	
+
+}

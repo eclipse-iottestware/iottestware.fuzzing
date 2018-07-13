@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="fuzzino">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/fuzzino.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

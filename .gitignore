@@ -13,6 +13,7 @@
 **/.recommenders
 **/.project
 **/.classpath
+/generator/lib
 
 # Titan
 **/.TITAN_properties

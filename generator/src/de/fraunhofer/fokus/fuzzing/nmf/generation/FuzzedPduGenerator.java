@@ -19,13 +19,10 @@ public class FuzzedPduGenerator {
             if (values.containsKey(field.getName())) {
                 int length = field.getEnd() - field.getStart() + 1;
                 byte[] extract = ByteHelper.extract(pdu, field.getStart(), length);
-
                 setFuzzedValue(extract, field, values.get(field.getName()));
-
                 for (int i = 0; i < length; i++) {
                     pdu[field.getStart() + i] = extract[i];
                 }
-
                 String s = ByteHelper.byteArrayToHexString(extract);
                 //System.out.println(field.getName() + ":" + s);
             }

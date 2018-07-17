@@ -1,24 +1,11 @@
 package de.fraunhofer.fokus.fuzzing.nmf;
 
 
-import de.fraunhofer.fokus.fuzzing.fuzzino.FuzzedValue;
-import de.fraunhofer.fokus.fuzzing.fuzzino.heuristics.ComputableFuzzingHeuristic;
-import de.fraunhofer.fokus.fuzzing.fuzzino.heuristics.generators.IntegerGenerator;
-import de.fraunhofer.fokus.fuzzing.fuzzino.heuristics.generators.IntegerGeneratorFactory;
-import de.fraunhofer.fokus.fuzzing.fuzzino.request.IntegerSpecification;
-import de.fraunhofer.fokus.fuzzing.fuzzino.request.RequestFactory;
 import de.fraunhofer.fokus.fuzzing.nmf.compilation.FuzzDataSetCompiler;
 import de.fraunhofer.fokus.fuzzing.nmf.compilation.PduProcessor;
-import de.fraunhofer.fokus.fuzzing.nmf.generation.FuzzedPduGenerator;
-import de.fraunhofer.fokus.fuzzing.nmf.generation.FuzzedValueProvider;
 import de.fraunhofer.fokus.fuzzing.nmf.json.JsonFilePduProcessor;
 import de.fraunhofer.fokus.fuzzing.nmf.strategy.SingleFieldStrategy;
 import de.fraunhofer.fokus.fuzzing.nmf.strategy.Strategy;
-
-import java.math.BigInteger;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
 
 public class Main {
 

@@ -7,7 +7,7 @@ import de.fraunhofer.fokus.fuzzing.fuzzino.request.IntegerSpecification;
 import de.fraunhofer.fokus.fuzzing.fuzzino.request.RequestFactory;
 import de.fraunhofer.fokus.fuzzing.nmf.FieldDescription;
 import de.fraunhofer.fokus.fuzzing.nmf.PduDescription;
-import de.fraunhofer.fokus.fuzzing.nmf.util.BitHelper;
+import de.fraunhofer.fokus.fuzzing.nmf.util.BitsAndByteHelper;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -48,7 +48,7 @@ public class GeneratorProvider {
 
     private static IntegerSpecification getIntegerSpecification(FieldDescription field) {
         IntegerSpecification specification = RequestFactory.INSTANCE.createNumberSpecification();
-        int bits = BitHelper.numOfBits(field.getBitmask(), field.getEnd() - field.getStart());
+        int bits = BitsAndByteHelper.numOfBits(field.getBitmask(), field.getEnd() - field.getStart());
         specification.setBits(bits);
         specification.setIsSigned(false);
         //TODO implement boundaries

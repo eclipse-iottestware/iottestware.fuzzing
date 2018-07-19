@@ -53,11 +53,11 @@
             <scope>test</scope>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>de.fraunhofer.fokus.fuzzing.fuzzino</groupId>-->
-            <!--<artifactId>fuzzino</artifactId>-->
-            <!--<version>1.0.0</version>-->
-            <!--<systemPath>${project.basedir}/lib/fuzzino.jar</systemPath>-->
-            <!--<scope>system</scope>-->
+        <!--<groupId>de.fraunhofer.fokus.fuzzing.fuzzino</groupId>-->
+        <!--<artifactId>fuzzino</artifactId>-->
+        <!--<version>1.0.0</version>-->
+        <!--<systemPath>${project.basedir}/lib/fuzzino.jar</systemPath>-->
+        <!--<scope>system</scope>-->
         <!--</dependency>-->
     </dependencies>
 
@@ -114,6 +114,42 @@
                         <include>src/**/*.java</include>
                     </includes>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.gmaven</groupId>
+                <artifactId>gmaven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                        <configuration>
+                            <source>
+                                def lines = 0
+                                def badPath = "target/checkout/fuzzino-src/src/de/fraunhofer/fokus/fuzzing/fuzzino/heuristics/generators/string/data/BadLongUnicodeStrings.java"
+                                def badFile = new File(badPath)
+                                def buffer = new StringBuffer();
+                                badFile.eachLine { line ->
+                                    lines++
+                                    if (lines != 227) {
+                                        buffer.append(line)
+                                        buffer.append(System.lineSeparator())
+                                    } else {
+                                        if (!line.contains("u8202")) {
+                                            buffer.append(line)
+                                            buffer.append(System.lineSeparator())
+                                        }
+                                    }
+                                }
+                                println "Lines:" + lines
+                                new File(badPath).withWriter { writer ->
+                                    writer.write(buffer.toString())
+                                }
+                            </source>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

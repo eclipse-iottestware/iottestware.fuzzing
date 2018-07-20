@@ -1,0 +1,23 @@
+module playground {
+	import from Syscall_Functions all;
+	import from Hexreader_Functions all;
+	
+	control{
+  		log(f_sysCall("pwd"))
+  		var boolean loaded := f_readFile("../fuzzdata/coap.txt");
+  		log(loaded);
+  		if(loaded){
+    		var integer count := 0;
+    		while (f_hasLine()) {
+    		  var octetstring oct := f_readOctLine();
+    		  log(oct);
+    		  log(count);
+  		  	  count := count + 1;
+    		}
+    		var boolean closed := f_closeFile();
+    		log(closed);
+		}else{
+		  log("hex file not found");
+		}
+  	}
+}

@@ -1,0 +1,519 @@
+[
+  {
+    "_index": "packets-2018-02-24",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame_raw": [
+          "00000000000000000000000008004500002ff7374000401145847f0000017f0000011633dc69001bfe2e60453039c0ff49276d20616c697665202e2e2e",
+          0,
+          61,
+          0,
+          1
+        ],
+        "frame": {
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "lo"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Feb  1, 2018 16:30:20.159761230 Mitteleurop\u00c3\u00a4ische Zeit",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1517499020.159761230",
+          "frame.time_delta": "0.000456329",
+          "frame.time_delta_displayed": "0.000456329",
+          "frame.time_relative": "5.927255702",
+          "frame.number": "84",
+          "frame.len": "61",
+          "frame.cap_len": "61",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:udp:coap",
+          "frame.coloring_rule.name": "UDP",
+          "frame.coloring_rule.string": "udp"
+        },
+        "eth_raw": [
+          "0000000000000000000000000800",
+          0,
+          14,
+          0,
+          1
+        ],
+        "eth": {
+          "eth.dst_raw": [
+            "000000000000",
+            0,
+            6,
+            0,
+            29
+          ],
+          "eth.dst": "00:00:00:00:00:00",
+          "eth.dst_tree": {
+            "eth.dst_resolved_raw": [
+              "000000000000",
+              0,
+              6,
+              0,
+              26
+            ],
+            "eth.dst_resolved": "00:00:00_00:00:00",
+            "eth.addr_raw": [
+              "000000000000",
+              0,
+              6,
+              0,
+              29
+            ],
+            "eth.addr": "00:00:00:00:00:00",
+            "eth.addr_resolved_raw": [
+              "000000000000",
+              0,
+              6,
+              0,
+              26
+            ],
+            "eth.addr_resolved": "00:00:00_00:00:00",
+            "eth.lg_raw": [
+              "0",
+              0,
+              3,
+              131072,
+              2
+            ],
+            "eth.lg": "0",
+            "eth.ig_raw": [
+              "0",
+              0,
+              3,
+              65536,
+              2
+            ],
+            "eth.ig": "0"
+          },
+          "eth.src_raw": [
+            "000000000000",
+            6,
+            6,
+            0,
+            29
+          ],
+          "eth.src": "00:00:00:00:00:00",
+          "eth.src_tree": {
+            "eth.src_resolved_raw": [
+              "000000000000",
+              6,
+              6,
+              0,
+              26
+            ],
+            "eth.src_resolved": "00:00:00_00:00:00",
+            "eth.addr_raw": [
+              "000000000000",
+              6,
+              6,
+              0,
+              29
+            ],
+            "eth.addr": "00:00:00:00:00:00",
+            "eth.addr_resolved_raw": [
+              "000000000000",
+              6,
+              6,
+              0,
+              26
+            ],
+            "eth.addr_resolved": "00:00:00_00:00:00",
+            "eth.lg_raw": [
+              "0",
+              6,
+              3,
+              131072,
+              2
+            ],
+            "eth.lg": "0",
+            "eth.ig_raw": [
+              "0",
+              6,
+              3,
+              65536,
+              2
+            ],
+            "eth.ig": "0"
+          },
+          "eth.type_raw": [
+            "0800",
+            12,
+            2,
+            0,
+            5
+          ],
+          "eth.type": "0x00000800"
+        },
+        "ip_raw": [
+          "4500002ff7374000401145847f0000017f000001",
+          14,
+          20,
+          0,
+          1
+        ],
+        "ip": {
+          "ip.version_raw": [
+            "4",
+            14,
+            1,
+            240,
+            4
+          ],
+          "ip.version": "4",
+          "ip.hdr_len_raw": [
+            "45",
+            14,
+            1,
+            0,
+            4
+          ],
+          "ip.hdr_len": "20",
+          "ip.dsfield_raw": [
+            "00",
+            15,
+            1,
+            0,
+            4
+          ],
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp_raw": [
+              "0",
+              15,
+              1,
+              252,
+              4
+            ],
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn_raw": [
+              "0",
+              15,
+              1,
+              3,
+              4
+            ],
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len_raw": [
+            "002f",
+            16,
+            2,
+            0,
+            5
+          ],
+          "ip.len": "47",
+          "ip.id_raw": [
+            "f737",
+            18,
+            2,
+            0,
+            5
+          ],
+          "ip.id": "0x0000f737",
+          "ip.flags_raw": [
+            "40",
+            20,
+            1,
+            0,
+            4
+          ],
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb_raw": [
+              "40",
+              20,
+              1,
+              0,
+              2
+            ],
+            "ip.flags.rb": "0",
+            "ip.flags.df_raw": [
+              "40",
+              20,
+              1,
+              0,
+              2
+            ],
+            "ip.flags.df": "1",
+            "ip.flags.mf_raw": [
+              "40",
+              20,
+              1,
+              0,
+              2
+            ],
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset_raw": [
+            "4000",
+            20,
+            2,
+            0,
+            5
+          ],
+          "ip.frag_offset": "0",
+          "ip.ttl_raw": [
+            "40",
+            22,
+            1,
+            0,
+            4
+          ],
+          "ip.ttl": "64",
+          "ip.proto_raw": [
+            "11",
+            23,
+            1,
+            0,
+            4
+          ],
+          "ip.proto": "17",
+          "ip.checksum_raw": [
+            "4584",
+            24,
+            2,
+            0,
+            5
+          ],
+          "ip.checksum": "0x00004584",
+          "ip.checksum.status": "2",
+          "ip.src_raw": [
+            "7f000001",
+            26,
+            4,
+            0,
+            32
+          ],
+          "ip.src": "127.0.0.1",
+          "ip.addr_raw": [
+            "7f000001",
+            26,
+            4,
+            0,
+            32
+          ],
+          "ip.addr": "127.0.0.1",
+          "ip.src_host_raw": [
+            "7f000001",
+            26,
+            4,
+            0,
+            26
+          ],
+          "ip.src_host": "127.0.0.1",
+          "ip.host_raw": [
+            "7f000001",
+            26,
+            4,
+            0,
+            26
+          ],
+          "ip.host": "127.0.0.1",
+          "ip.dst_raw": [
+            "7f000001",
+            30,
+            4,
+            0,
+            32
+          ],
+          "ip.dst": "127.0.0.1",
+          "ip.addr_raw": [
+            "7f000001",
+            30,
+            4,
+            0,
+            32
+          ],
+          "ip.addr": "127.0.0.1",
+          "ip.dst_host_raw": [
+            "7f000001",
+            30,
+            4,
+            0,
+            26
+          ],
+          "ip.dst_host": "127.0.0.1",
+          "ip.host_raw": [
+            "7f000001",
+            30,
+            4,
+            0,
+            26
+          ],
+          "ip.host": "127.0.0.1",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "udp_raw": [
+          "1633dc69001bfe2e",
+          34,
+          8,
+          0,
+          1
+        ],
+        "udp": {
+          "udp.srcport_raw": [
+            "1633",
+            34,
+            2,
+            0,
+            5
+          ],
+          "udp.srcport": "5683",
+          "udp.dstport_raw": [
+            "dc69",
+            36,
+            2,
+            0,
+            5
+          ],
+          "udp.dstport": "56425",
+          "udp.port_raw": [
+            "1633",
+            34,
+            2,
+            0,
+            5
+          ],
+          "udp.port": "5683",
+          "udp.port_raw": [
+            "dc69",
+            36,
+            2,
+            0,
+            5
+          ],
+          "udp.port": "56425",
+          "udp.length_raw": [
+            "001b",
+            38,
+            2,
+            0,
+            5
+          ],
+          "udp.length": "27",
+          "udp.checksum_raw": [
+            "fe2e",
+            40,
+            2,
+            0,
+            5
+          ],
+          "udp.checksum": "0x0000fe2e",
+          "udp.checksum.status": "2",
+          "udp.stream": "4"
+        },
+        "coap_raw": [
+          "60453039c0ff49276d20616c697665202e2e2e",
+          42,
+          19,
+          0,
+          1
+        ],
+        "coap": {
+          "coap.version_raw": [
+            "1",
+            42,
+            1,
+            192,
+            4
+          ],
+          "coap.version": "1",
+          "coap.type_raw": [
+            "2",
+            42,
+            1,
+            48,
+            4
+          ],
+          "coap.type": "2",
+          "coap.token_len_raw": [
+            "0",
+            42,
+            1,
+            15,
+            4
+          ],
+          "coap.token_len": "0",
+          "coap.code_raw": [
+            "45",
+            43,
+            1,
+            0,
+            4
+          ],
+          "coap.code": "69",
+          "coap.mid_raw": [
+            "3039",
+            44,
+            2,
+            0,
+            5
+          ],
+          "coap.mid": "12345",
+          "coap.opt.name_raw": [
+            "c0",
+            46,
+            1,
+            0,
+            26
+          ],
+          "coap.opt.name": "#1: Content-Format",
+          "coap.opt.name_tree": {
+            "coap.opt.desc_raw": [
+              "c0",
+              46,
+              1,
+              0,
+              26
+            ],
+            "coap.opt.desc": "Type 12, Elective, Safe",
+            "coap.opt.delta_raw": [
+              "C",
+              46,
+              1,
+              240,
+              4
+            ],
+            "coap.opt.delta": "12",
+            "coap.opt.length_raw": [
+              "0",
+              46,
+              1,
+              15,
+              4
+            ],
+            "coap.opt.length": "0",
+            "coap.opt.ctype": "text\/plain; charset=utf-8"
+          },
+          "coap.opt.end_marker_raw": [
+            "ff",
+            47,
+            1,
+            0,
+            4
+          ],
+          "coap.opt.end_marker": "255",
+          "coap.payload_raw": [
+            "49276d20616c697665202e2e2e",
+            48,
+            13,
+            0,
+            26
+          ],
+          "coap.payload": "Payload Content-Format: application\/octet-stream, Length: 13",
+          "coap.payload_tree": {
+            "coap.payload_desc": "application\/octet-stream",
+            "coap.payload_length": "13"
+          }
+        }
+      }
+    }
+  }
+]

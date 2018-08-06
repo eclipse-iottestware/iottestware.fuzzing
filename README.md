@@ -5,3 +5,4 @@ Contains two pieces. First, the generator compiles a set of fuzzdata (test cases
 - [ ] control generation via ttcn3 functions
 - [ ] filter doublets in data
 - [ ] generate data for more types of fields
+- [ ] dynamic lenght checksum adjustment

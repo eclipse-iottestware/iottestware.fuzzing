@@ -52,17 +52,16 @@
             <version>5.0.3</version>
             <scope>test</scope>
         </dependency>
-        <!--<dependency>-->
-        <!--<groupId>de.fraunhofer.fokus.fuzzing.fuzzino</groupId>-->
-        <!--<artifactId>fuzzino</artifactId>-->
-        <!--<version>1.0.0</version>-->
-        <!--<systemPath>${project.basedir}/lib/fuzzino.jar</systemPath>-->
-        <!--<scope>system</scope>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>de.fraunhofer.fokus.fuzzing.fuzzino</groupId>
+            <artifactId>de.fraunhofer.fokus.fuzzing.fuzzino</artifactId>
+            <version>0.6.0.2</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
-        <sourceDirectory>.</sourceDirectory>
+        <sourceDirectory>${project.basedir}/src</sourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -71,6 +70,15 @@
                 <configuration>
                     <goals>install</goals>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>check-out-fuzzino</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>bootstrap</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -100,56 +108,6 @@
                         </manifest>
                     </archive>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <encoding>ISO-8859-1</encoding>
-                    <includes>
-                        <include>target/checkout/fuzzino-src/src/**/*.java</include>
-                        <include>src/**/*.java</include>
-                    </includes>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.gmaven</groupId>
-                <artifactId>gmaven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>execute</goal>
-                        </goals>
-                        <configuration>
-                            <source>
-                                def lines = 0
-                                def badPath = "target/checkout/fuzzino-src/src/de/fraunhofer/fokus/fuzzing/fuzzino/heuristics/generators/string/data/BadLongUnicodeStrings.java"
-                                def badFile = new File(badPath)
-                                def buffer = new StringBuffer();
-                                badFile.eachLine { line ->
-                                    lines++
-                                    if (lines != 227) {
-                                        buffer.append(line)
-                                        buffer.append(System.lineSeparator())
-                                    } else {
-                                        if (!line.contains("u8202")) {
-                                            buffer.append(line)
-                                            buffer.append(System.lineSeparator())
-                                        }
-                                    }
-                                }
-                                println "Lines:" + lines
-                                new File(badPath).withWriter { writer ->
-                                    writer.write(buffer.toString())
-                                }
-                            </source>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>

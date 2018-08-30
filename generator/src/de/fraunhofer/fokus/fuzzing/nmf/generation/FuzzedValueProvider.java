@@ -16,12 +16,9 @@ public class FuzzedValueProvider {
     private Map<String, Integer> currentPositionMap; // position in iterator list of  currentIterators.
     private Map<String, FuzzedValue> currentValues;
 
-<<<<<<< HEAD
-=======
     private List<Map<String, FuzzedValue>> lastValues;
     private final static int LAST_SIZE = 10;
     private boolean filter = false;
->>>>>>> 3cbe68524d67fff6ee5e5e341bb721eb5bf88a64
 
     public void generateByStrategy(Strategy strategy) {
         init(strategy);
@@ -31,10 +28,7 @@ public class FuzzedValueProvider {
         fieldGeneratorMap = strategy.getGeneratorMap();
         fieldListSet = strategy.getFieldCombinationList();
         currentSetPos = 0;
-<<<<<<< HEAD
-=======
         lastValues = new ArrayList<>();
->>>>>>> 3cbe68524d67fff6ee5e5e341bb721eb5bf88a64
         initCurrentSet();
     }
 
@@ -97,15 +91,12 @@ public class FuzzedValueProvider {
     public Map<String, FuzzedValue> nextSetValues() {
         Map<String, FuzzedValue> rtn = new HashMap<>(currentValues);
         prepareNextSetValues();
-<<<<<<< HEAD
-=======
         if (filter) {
             while (currentValues != null && alreadyGenerated(currentValues)) {
                 prepareNextSetValues();
             }
             addLastValues(rtn);
         }
->>>>>>> 3cbe68524d67fff6ee5e5e341bb721eb5bf88a64
         return rtn;
     }
 
@@ -169,8 +160,6 @@ public class FuzzedValueProvider {
         };
     }
 
-<<<<<<< HEAD
-=======
     /*
     Doublets check
      */
@@ -208,5 +197,4 @@ public class FuzzedValueProvider {
         return true;
     }
 
->>>>>>> 3cbe68524d67fff6ee5e5e341bb721eb5bf88a64
 }

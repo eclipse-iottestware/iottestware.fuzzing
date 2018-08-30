@@ -52,6 +52,7 @@
             <version>5.0.3</version>
             <scope>test</scope>
         </dependency>
+<<<<<<< HEAD
         <!--<dependency>-->
         <!--<groupId>de.fraunhofer.fokus.fuzzing.fuzzino</groupId>-->
         <!--<artifactId>fuzzino</artifactId>-->
@@ -63,6 +64,18 @@
 
     <build>
         <sourceDirectory>.</sourceDirectory>
+=======
+        <dependency>
+            <groupId>de.fraunhofer.fokus.fuzzing.fuzzino</groupId>
+            <artifactId>de.fraunhofer.fokus.fuzzing.fuzzino</artifactId>
+            <version>0.6.0.2</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <sourceDirectory>${project.basedir}/src</sourceDirectory>
+>>>>>>> 3cbe68524d67fff6ee5e5e341bb721eb5bf88a64
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -71,6 +84,18 @@
                 <configuration>
                     <goals>install</goals>
                 </configuration>
+<<<<<<< HEAD
+=======
+                <executions>
+                    <execution>
+                        <id>check-out-fuzzino</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>bootstrap</goal>
+                        </goals>
+                    </execution>
+                </executions>
+>>>>>>> 3cbe68524d67fff6ee5e5e341bb721eb5bf88a64
             </plugin>
             <plugin>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -101,6 +126,7 @@
                     </archive>
                 </configuration>
             </plugin>
+<<<<<<< HEAD
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -151,6 +177,8 @@
                     </execution>
                 </executions>
             </plugin>
+=======
+>>>>>>> 3cbe68524d67fff6ee5e5e341bb721eb5bf88a64
         </plugins>
     </build>
 

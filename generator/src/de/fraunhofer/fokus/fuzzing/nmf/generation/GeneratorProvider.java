@@ -3,8 +3,16 @@ package de.fraunhofer.fokus.fuzzing.nmf.generation;
 import de.fraunhofer.fokus.fuzzing.fuzzino.heuristics.ComputableFuzzingHeuristic;
 import de.fraunhofer.fokus.fuzzing.fuzzino.heuristics.generators.IntegerGenerator;
 import de.fraunhofer.fokus.fuzzing.fuzzino.heuristics.generators.IntegerGeneratorFactory;
+<<<<<<< HEAD
 import de.fraunhofer.fokus.fuzzing.fuzzino.request.IntegerSpecification;
 import de.fraunhofer.fokus.fuzzing.fuzzino.request.RequestFactory;
+=======
+import de.fraunhofer.fokus.fuzzing.fuzzino.heuristics.generators.StringGenerator;
+import de.fraunhofer.fokus.fuzzing.fuzzino.heuristics.generators.StringGeneratorFactory;
+import de.fraunhofer.fokus.fuzzing.fuzzino.request.IntegerSpecification;
+import de.fraunhofer.fokus.fuzzing.fuzzino.request.RequestFactory;
+import de.fraunhofer.fokus.fuzzing.fuzzino.request.StringSpecification;
+>>>>>>> 3cbe68524d67fff6ee5e5e341bb721eb5bf88a64
 import de.fraunhofer.fokus.fuzzing.nmf.FieldDescription;
 import de.fraunhofer.fokus.fuzzing.nmf.PduDescription;
 import de.fraunhofer.fokus.fuzzing.nmf.util.BitsAndByteHelper;
@@ -28,8 +36,15 @@ public class GeneratorProvider {
         for (FieldDescription field : description.getFields()) {
             switch (field.getType()) {
                 case INTEGER:
+<<<<<<< HEAD
                     map.put(field.getName(),getIntegerGenerators(field));
                     break;
+=======
+                    map.put(field.getName(), getIntegerGenerators(field));
+                    break;
+                case STRING:
+                    map.put(field.getName(), getStringGenerators(field));
+>>>>>>> 3cbe68524d67fff6ee5e5e341bb721eb5bf88a64
             }
         }
         return map;
@@ -40,7 +55,11 @@ public class GeneratorProvider {
         List<ComputableFuzzingHeuristic> generators = new ArrayList<>();
         List<IntegerGenerator> allIntegerGenerators =
                 IntegerGeneratorFactory.INSTANCE.createAll(getIntegerSpecification(field), SEED);
+<<<<<<< HEAD
         for(IntegerGenerator gen:allIntegerGenerators){
+=======
+        for (IntegerGenerator gen : allIntegerGenerators) {
+>>>>>>> 3cbe68524d67fff6ee5e5e341bb721eb5bf88a64
             generators.add(gen);
         }
         return generators;
@@ -57,4 +76,19 @@ public class GeneratorProvider {
         return specification;
     }
 
+<<<<<<< HEAD
+=======
+    private static List<ComputableFuzzingHeuristic> getStringGenerators(FieldDescription field) {
+        List<ComputableFuzzingHeuristic> generators = new ArrayList<>();
+        StringSpecification stringSpecification = RequestFactory.INSTANCE.createStringSpecification();
+        stringSpecification.setMaxLength(field.getEnd() - field.getStart());
+        //TODO string types parse
+        List<StringGenerator> all = StringGeneratorFactory.INSTANCE.createAll(stringSpecification, SEED);
+        for (StringGenerator gen : all) {
+            generators.add(gen);
+        }
+        return generators;
+    }
+
+>>>>>>> 3cbe68524d67fff6ee5e5e341bb721eb5bf88a64
 }

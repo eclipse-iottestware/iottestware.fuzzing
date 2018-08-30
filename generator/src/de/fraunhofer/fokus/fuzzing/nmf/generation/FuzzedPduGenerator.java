@@ -16,6 +16,10 @@ public class FuzzedPduGenerator {
         byte[] pdu = BitsAndByteHelper.hexStringToByteArray(pduStr);
         for (FieldDescription field : description.getFields()) {
             if (values.containsKey(field.getName())) {
+<<<<<<< HEAD
+=======
+                //TODO pump up instead in insert
+>>>>>>> 3cbe68524d67fff6ee5e5e341bb721eb5bf88a64
                 int length = field.getEnd() - field.getStart() + 1;
                 byte[] extract = BitsAndByteHelper.extract(pdu, field.getStart(), length);
                 setFuzzedValue(extract, field, values.get(field.getName()));
@@ -39,9 +43,18 @@ public class FuzzedPduGenerator {
                 } catch (ArithmeticException e) {
                     //e.printStackTrace();
                 }
+<<<<<<< HEAD
 
                 setFuzzedValue(extract, field, num);
                 break;
+=======
+                setFuzzedValue(extract, field, num);
+                break;
+            case STRING:
+                String s = (String) value.getValue();
+                setFuzzedValue(extract, field, s);
+                break;
+>>>>>>> 3cbe68524d67fff6ee5e5e341bb721eb5bf88a64
         }
     }
 
@@ -61,4 +74,14 @@ public class FuzzedPduGenerator {
         }
     }
 
+<<<<<<< HEAD
+=======
+    private static void setFuzzedValue(byte[] extract, FieldDescription field, String val) {
+        byte[] bytes = val.getBytes();
+        for (int i = 0; i < extract.length && i < bytes.length; i++) {
+            extract[i] = bytes[i];
+        }
+    }
+
+>>>>>>> 3cbe68524d67fff6ee5e5e341bb721eb5bf88a64
 }

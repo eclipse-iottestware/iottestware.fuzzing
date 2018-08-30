@@ -16,6 +16,12 @@ public class FuzzedValueProvider {
     private Map<String, Integer> currentPositionMap; // position in iterator list of  currentIterators.
     private Map<String, FuzzedValue> currentValues;
 
+<<<<<<< HEAD
+=======
+    private List<Map<String, FuzzedValue>> lastValues;
+    private final static int LAST_SIZE = 10;
+    private boolean filter = false;
+>>>>>>> 3cbe68524d67fff6ee5e5e341bb721eb5bf88a64
 
     public void generateByStrategy(Strategy strategy) {
         init(strategy);
@@ -25,6 +31,10 @@ public class FuzzedValueProvider {
         fieldGeneratorMap = strategy.getGeneratorMap();
         fieldListSet = strategy.getFieldCombinationList();
         currentSetPos = 0;
+<<<<<<< HEAD
+=======
+        lastValues = new ArrayList<>();
+>>>>>>> 3cbe68524d67fff6ee5e5e341bb721eb5bf88a64
         initCurrentSet();
     }
 
@@ -87,6 +97,15 @@ public class FuzzedValueProvider {
     public Map<String, FuzzedValue> nextSetValues() {
         Map<String, FuzzedValue> rtn = new HashMap<>(currentValues);
         prepareNextSetValues();
+<<<<<<< HEAD
+=======
+        if (filter) {
+            while (currentValues != null && alreadyGenerated(currentValues)) {
+                prepareNextSetValues();
+            }
+            addLastValues(rtn);
+        }
+>>>>>>> 3cbe68524d67fff6ee5e5e341bb721eb5bf88a64
         return rtn;
     }
 
@@ -150,4 +169,44 @@ public class FuzzedValueProvider {
         };
     }
 
+<<<<<<< HEAD
+=======
+    /*
+    Doublets check
+     */
+
+    private void addLastValues(Map<String, FuzzedValue> newValues) {
+        if (lastValues.size() == LAST_SIZE) {
+            lastValues.remove(0);
+        }
+        lastValues.add(newValues);
+    }
+
+    private boolean alreadyGenerated(Map<String, FuzzedValue> newValues) {
+        if (lastValues.isEmpty()) {
+            return false;
+        }
+        int diff = 0;
+        for (int i = 0; i < lastValues.size() && i < LAST_SIZE; i++) {
+            // TODO Fuzzed Value implement equal?
+            for (String s : newValues.keySet()) {
+                Map<String, FuzzedValue> iVal = lastValues.get(i);
+                if (!iVal.containsKey(s)) {
+                    continue;
+                }
+                Object v1 = iVal.get(s).getValue();
+                Object v2 = newValues.get(s).getValue();
+                if (!v1.equals(v2)) {
+                    diff++;
+                    break;
+                }
+            }
+        }
+        if (diff == lastValues.size()) {
+            return false;
+        }
+        return true;
+    }
+
+>>>>>>> 3cbe68524d67fff6ee5e5e341bb721eb5bf88a64
 }

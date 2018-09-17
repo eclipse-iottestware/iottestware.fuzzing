@@ -14,17 +14,11 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-    <scm>
-        <connection>scm:git:https://github.com/fraunhoferfokus/Fuzzino.git</connection>
-        <developerConnection>scm:git:https://github.com/fraunhoferfokus/Fuzzino.git</developerConnection>
-        <url>https://github.com/fraunhoferfokus/Fuzzino.git</url>
-    </scm>
 
     <repositories>
         <repository>
-            <id>mvnrepository</id>
-            <name>mvnrepository</name>
-            <url>http://www.mvnrepository.com</url>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
         </repository>
     </repositories>
 
@@ -53,9 +47,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>de.fraunhofer.fokus.fuzzing.fuzzino</groupId>
-            <artifactId>de.fraunhofer.fokus.fuzzing.fuzzino</artifactId>
-            <version>0.6.0.2</version>
+            <groupId>com.github.fraunhoferfokus</groupId>
+            <artifactId>Fuzzino</artifactId>
+            <version>5fb9e7e</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
@@ -63,23 +57,6 @@
     <build>
         <sourceDirectory>${project.basedir}/src</sourceDirectory>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-scm-plugin</artifactId>
-                <version>1.10.0</version>
-                <configuration>
-                    <goals>install</goals>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>check-out-fuzzino</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>bootstrap</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
             <plugin>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <executions>

@@ -28,13 +28,20 @@ public class GeneratorProvider {
      */
     public static Map<String, List<ComputableFuzzingHeuristic>> getFieldGeneratorMap(PduDescription description) {
         Map<String, List<ComputableFuzzingHeuristic>> map = new HashMap<>();
+        List<ComputableFuzzingHeuristic> newGeneratorList;
         for (FieldDescription field : description.getFields()) {
+            newGeneratorList = null;
             switch (field.getType()) {
                 case INTEGER:
                     map.put(field.getName(), getIntegerGenerators(field));
                     break;
                 case STRING:
                     map.put(field.getName(), getStringGenerators(field));
+                default:
+                    break;
+            }
+            if (newGeneratorList != null && newGeneratorList.size() == 0) {
+                System.out.println("Can't provide data for " + field.getName());
             }
         }
         return map;

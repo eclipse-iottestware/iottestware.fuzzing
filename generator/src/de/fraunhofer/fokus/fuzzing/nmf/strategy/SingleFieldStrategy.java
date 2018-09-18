@@ -28,7 +28,8 @@ public class SingleFieldStrategy implements Strategy {
             Map<String, List<ComputableFuzzingHeuristic>> generatorMap = getGeneratorMap();
             strategy = new ArrayList<>();
             for (FieldDescription field : description.getFields()) {
-                if (generatorMap.containsKey(field.getName())) {
+                if (generatorMap.containsKey(field.getName())
+                        && generatorMap.get(field.getName()).size() > 0) {
                     List<String> activeFields = new ArrayList<>();
                     activeFields.add(field.getName());
                     strategy.add(activeFields);

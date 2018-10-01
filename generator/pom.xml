@@ -14,17 +14,11 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-    <scm>
-        <connection>scm:git:https://github.com/fraunhoferfokus/Fuzzino.git</connection>
-        <developerConnection>scm:git:https://github.com/fraunhoferfokus/Fuzzino.git</developerConnection>
-        <url>https://github.com/fraunhoferfokus/Fuzzino.git</url>
-    </scm>
 
     <repositories>
         <repository>
-            <id>mvnrepository</id>
-            <name>mvnrepository</name>
-            <url>http://www.mvnrepository.com</url>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
         </repository>
     </repositories>
 
@@ -52,26 +46,17 @@
             <version>5.0.3</version>
             <scope>test</scope>
         </dependency>
-        <!--<dependency>-->
-        <!--<groupId>de.fraunhofer.fokus.fuzzing.fuzzino</groupId>-->
-        <!--<artifactId>fuzzino</artifactId>-->
-        <!--<version>1.0.0</version>-->
-        <!--<systemPath>${project.basedir}/lib/fuzzino.jar</systemPath>-->
-        <!--<scope>system</scope>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>com.github.fraunhoferfokus</groupId>
+            <artifactId>Fuzzino</artifactId>
+            <version>5fb9e7e</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
-        <sourceDirectory>.</sourceDirectory>
+        <sourceDirectory>${project.basedir}/src</sourceDirectory>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-scm-plugin</artifactId>
-                <version>1.10.0</version>
-                <configuration>
-                    <goals>install</goals>
-                </configuration>
-            </plugin>
             <plugin>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <executions>
@@ -100,56 +85,6 @@
                         </manifest>
                     </archive>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <encoding>ISO-8859-1</encoding>
-                    <includes>
-                        <include>target/checkout/fuzzino-src/src/**/*.java</include>
-                        <include>src/**/*.java</include>
-                    </includes>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.gmaven</groupId>
-                <artifactId>gmaven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>execute</goal>
-                        </goals>
-                        <configuration>
-                            <source>
-                                def lines = 0
-                                def badPath = "target/checkout/fuzzino-src/src/de/fraunhofer/fokus/fuzzing/fuzzino/heuristics/generators/string/data/BadLongUnicodeStrings.java"
-                                def badFile = new File(badPath)
-                                def buffer = new StringBuffer();
-                                badFile.eachLine { line ->
-                                    lines++
-                                    if (lines != 227) {
-                                        buffer.append(line)
-                                        buffer.append(System.lineSeparator())
-                                    } else {
-                                        if (!line.contains("u8202")) {
-                                            buffer.append(line)
-                                            buffer.append(System.lineSeparator())
-                                        }
-                                    }
-                                }
-                                println "Lines:" + lines
-                                new File(badPath).withWriter { writer ->
-                                    writer.write(buffer.toString())
-                                }
-                            </source>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>

@@ -5,8 +5,6 @@ import de.fraunhofer.fokus.fuzzing.nmf.PduDescription;
 import de.fraunhofer.fokus.fuzzing.nmf.testutil.TestPduProvider;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class JsonPduMapperTest {
 
     private final String fileName = "testdata/coap_bytes.json";
@@ -14,7 +12,7 @@ class JsonPduMapperTest {
 
     @Test
     void mapPdusFromFile() {
-        for(PduDescription pdu: TestPduProvider.getPduList()){
+        for(PduDescription pdu: TestPduProvider.getCoapPduList()){
             System.out.println(pdu.getPduStr());
             for(FieldDescription field:pdu.getFields()){
                 System.out.println(field);

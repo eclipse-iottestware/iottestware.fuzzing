@@ -15,7 +15,6 @@ public class FuzzDataSetCompiler {
 
 
     public FuzzDataSetCompiler(PduProcessor pduProcessor, Strategy strategy) {
-
         this.pduProcessor = pduProcessor;
         this.strategy = strategy;
     }

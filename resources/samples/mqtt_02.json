@@ -1,0 +1,86 @@
+{
+  "protocolModule": {
+    "protocol": "MQTT",
+    "encoding": "utf-8",
+    "payload": "json"
+  },
+
+
+  "generators": [ { "id": "g_rand_uniform" } ],
+
+
+  "mutators": [
+    { "id": "m_xor_protoname_fixed", "field": "protoname", "binary": "XOR", "hex": "0xA5A5" },
+    { "id": "m_inc_protolevel", "field": "protolevel", "unary": "INCR" },
+    { "id": "m_inc_clientid_len", "field": "clientIdlen", "unary": "INCR" },
+    { "id": "m_replace_clientid", "field": "clientId",  "binary": "SET", "generator": "g_rand_uniform" },
+    { "id": "m_replace_username", "field": "username",  "binary": "SET", "generator": "g_rand_uniform" },
+    { "id": "m_invert_username_flag", "field": "usernameflag", "unary": "NOT" },
+    { "id": "m_invert_flags_dup", "field": "DUP", "unary": "NOT" },
+    { "id": "m_invert_flags_retain", "field": "RETAIN", "unary": "NOT" },
+    { "id": "m_invert_flags_qos", "field": "QOS", "unary": "NOT" },
+    { "id": "m_inc_flags_qos", "field": "QOS", "unary": "INCR" },
+    { "id": "m_inc_pl_length", "field": "length", "unary": "INCR" },
+    { "id": "m_inc_rem_length", "field": "len", "unary": "INCR" },
+    { "id": "m_dec_rem_length", "field": "len", "unary": "DECR" },
+    { "id": "m_xor_topic", "field": "topic", "binary": "XOR", "hex": "0xFF551177" },
+    { "id": "m_xor_topic_2", "field": "topic", "binary": "XOR", "hex": "0xFF551177" },
+    { "id": "m_or_topic", "field": "topic", "binary": "XOR", "generator": "g_rand_uniform" },
+    { "id": "m_set_pl_length", "field": "length", "binary": "SET", "generator": "g_rand_uniform" }
+  ],
+
+
+  "filters": [
+    {
+      "id": "f_all_connect",
+      "description": "This filter matches all connect packets",
+      "direction": "Request",
+      "filter": { "field": "type", "op": "-eq", "value": 1 }
+    }, {
+      "id": "f_publish_subscribe",
+      "descritpion": "Matches all publish or subscribe or unsubscribe packets",
+      "direction": "All",
+      "left": {
+        "left": { "filter": { "field": "type", "op": "-eq", "value": 3 } },
+        "op": "OR",
+        "right": { "filter": { "field": "type", "op": "-eq", "value": 8 } } },
+      "op": "OR",
+      "right": { "filter": { "field": "type", "op": "-eq", "value": 10 } }
+    } ],
+
+
+  "rules": [
+    {
+      "match": "f_all_connect",
+      "distribution": {
+        "model": "multinomial",
+        "items": [
+          { "strength": 1, "mutators": [ "m_xor_protoname_fixed", "m_inc_protolevel" ] },
+          { "strength": 2, "mutators": [ "m_replace_username", "m_invert_username_flag" ] },
+          { "strength": 3, "mutators": [ "m_replace_clientid", "m_invert_username_flag" ] },
+          { "strength": 4, "mutators": [ "m_inc_clientid_len" ] },
+          { "strength": 4, "mutators": [ "m_replace_clientid" ] },
+          { "strength": 4, "mutators": [ "m_inc_clientid_len", "m_replace_clientid" ] },
+          { "strength": 5, "mutators": [ "m_invert_flags_dup", "m_invert_flags_qos" ] },
+          { "strength": 45, "mutators": [ ] }
+        ] }
+    }, {
+      "match": "f_publish_subscribe",
+      "distribution": {
+        "model": "multinomial",
+        "items": [
+          { "strength": 7, "mutators": [ "m_invert_flags_retain", "m_inc_flags_qos", "m_or_topic" ] },
+          { "strength": 7, "mutators": [ "m_invert_flags_retain", "m_xor_topic" ] },
+          { "strength": 9, "mutators": [ "m_invert_flags_retain", "m_inc_flags_qos", "m_or_topic", "m_set_pl_length" ] },
+          { "strength": 10, "mutators": [ "m_invert_flags_retain", "m_xor_topic", "m_inc_pl_length" ] },
+          { "strength": 10, "mutators": [ "m_inc_pl_length" ] },
+          { "strength": 15, "mutators": [ "m_inc_pl_length", "m_xor_topic_2" ] },
+          { "strength": 12, "mutators": [ "m_set_pl_length" ] },
+          { "strength": 10, "mutators": [ "m_inc_rem_length" ] },
+          { "strength": 2, "mutators": [ "m_dec_rem_length" ] },
+          { "strength": 10, "mutators": [ "m_dec_rem_length", "m_invert_flags_retain" ] },
+          { "strength": 10, "mutators": [ "m_inc_rem_length", "m_invert_flags_retain" ] },
+          { "strength": 15, "mutators": [ ] }
+        ] }
+    } ]
+}

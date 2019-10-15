@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+
+  "title": "A protocol field",
+  "description": "Describes one generic Packet Field",
+  "type": "object",
+
+  "definitions": {
+    "packetTypeField": {
+      "id": "#/definitions/packetTypeField",
+      "title": "Name of the packet type",
+      "type": "string"
+    }
+  }
+}

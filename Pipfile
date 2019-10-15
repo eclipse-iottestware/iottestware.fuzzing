@@ -1,0 +1,22 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pycodestyle = "*"
+pre-commit = "*"
+
+[packages]
+scapy = "*"
+sympy = "*"
+numpy = "*"
+jsonschema = "*"
+psutil = "*"
+paramiko = "*"
+matplotlib = "*"
+pyx = "*"
+xeger = "*"
+
+[requires]
+python_version = "3.7"

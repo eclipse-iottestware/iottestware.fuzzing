@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+
+  "title": "Mutators",
+  "description": "Mutators specify the fuzzing of fields",
+  "type": "object",
+
+  "definitions": {
+    "mutatorList": {
+      "id": "#/definitions/mutatorList",
+      "description": "A list of several mutators",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/mutator"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "mutatorId": {
+      "id": "#/definitions/mutatorId",
+      "description": "The unique ID of a mutator",
+      "type": "string",
+      "pattern": "^m_[A-Za-z]([A-Za-z0-9]|_)*$"
+    },
+    "mutator": {
+      "id": "#/definitions/mutator",
+      "description": "A specific mutator operation",
+      "type": "object",
+      "oneOf": [
+        { "required": ["id", "field", "unary"] },
+        { "required": ["id", "field", "binary", "hex"] },
+        { "required": ["id", "field", "binary", "generator"] }
+      ],
+      "properties": {
+        "id": { "$ref": "#/definitions/mutatorId" },
+        "field": { "$ref": "fields.json#/definitions/packetTypeField" },
+
+        "unary": { "$ref": "#/definitions/unaryOperator" },
+        "binary": { "$ref": "#/definitions/binaryOperator" },
+
+        "generator": { "$ref": "generators.json#/definitions/generatorId" },
+        "hex": { "type": "string", "pattern": "^0x([A-Fa-f0-9]{2})+$" }
+      }
+    },
+    "unaryOperator": {
+      "id": "#/definitions/unaryOperator",
+      "description": "An unary operator requires only the input value",
+      "type": "string",
+      "enum": ["NOT", "INCR", "DECR"]
+    },
+    "binaryOperator": {
+      "id": "#/definitions/binaryOperator",
+      "description": "A binary Logical Operator: input OP e2",
+      "type": "string",
+      "enum": ["XOR", "AND", "OR", "SET"]
+    },
+    "assignOperator": {
+      "id": "#/definitions/assignOperator",
+      "description": "An Assignment Operator can replace the input or append to the input",
+      "type": "string",
+      "enum": ["REPLACE", "APPEND"]
+    }
+  }
+}

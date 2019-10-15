@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+
+  "title": "Generator",
+  "description": "Configurable generate to produce random/specific values for mutators",
+  "type": "object",
+
+  "definitions": {
+    "generatorId": {
+      "id": "#/definitions/generatorId",
+      "description": "The unique ID of a generator",
+      "type": "string",
+      "pattern": "^g_[A-Za-z]([A-Za-z0-9]|_)*$"
+    },
+    "generators": {
+      "id": "#/definitions/generators",
+      "description": "Set of fuzz data generators",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/generatorType"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "generatorType": {
+      "id": "#/definitions/generatorType",
+      "description": "Description of a single generator",
+      "type": "object",
+      "required": ["id"],
+      "properties": {
+        "id": { "$ref": "#/definitions/generatorId" },
+        "seed": { "type": "integer" }
+      }
+    },
+    "rndInt": {
+      "id": "#/definitions/rndInt",
+      "description": "Specify which type of random number to choose or try auto to distinguish from context",
+      "type": "string",
+      "enum": ["uint8", "uint16", "uint32", "uint64", "auto"]
+    },
+    "rndStringFixedLen": {
+      "id": "#/definitions/rndStringFixedLen",
+      "description": "Get a random string from generator",
+      "type": "object",
+      "required": ["length"],
+      "properties": {
+        "encoding": { "$ref": "#/definitions/stringEncoding" },
+        "length": {
+          "oneOf": [
+            { "type": "integer", "minimum": 0  },
+            { "type": "string", "enum": ["auto"] }
+          ]
+        }
+      }
+    },
+    "stringEncoding": {
+      "id": "#/definitions/stringEncoding",
+      "type": "string",
+      "enum": ["utf-8", "ascii"]
+    }
+  }
+}

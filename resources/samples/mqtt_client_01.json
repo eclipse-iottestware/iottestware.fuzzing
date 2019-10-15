@@ -1,0 +1,73 @@
+{
+  "protocolModule": {
+    "protocol": "MQTT",
+    "encoding": "utf-8",
+    "payload": "json"
+  },
+
+
+  "generators": [
+    { "id": "g_rand_uniform" } ],
+
+
+  "mutators": [
+    { "id": "m_xor_payload", "field": "value.field_name", "binary": "XOR", "generator": "g_rand_uniform" },
+    { "id": "m_rnd_retcode", "field": "retcode", "binary": "SET", "generator": "g_rand_uniform" },
+    { "id": "m_rnd_type", "field": "type", "binary": "SET", "generator": "g_rand_uniform" },
+    { "id": "m_rnd_rem_len", "field": "len", "binary": "SET", "generator": "g_rand_uniform" },
+    { "id": "m_incr_type", "field": "type", "unary": "INCR" },
+    { "id": "m_rnd_qos", "field": "QOS", "binary": "SET", "generator": "g_rand_uniform" },
+    { "id": "m_invert_flags_dup", "field": "DUP", "unary": "NOT" },
+    { "id": "m_incr_flags_qos", "field": "QOS", "unary": "INCR" },
+    { "id": "m_invert_flags_session", "field": "sessPresentFlag", "unary": "NOT" },
+    { "id": "m_invert_flags_retain", "field": "RETAIN", "unary": "NOT" }
+  ],
+
+
+  "filters": [
+    {
+      "id": "f_connack",
+      "description": "This filter matches all CONNACK packets",
+      "direction": "Response",
+      "filter": { "field": "type", "op": "-eq", "value": 2 }
+    }, {
+      "id": "f_puback",
+      "description": "Complex filter matches ACK message in Publish sequence with QoS > 0",
+      "direction": "Response",
+      "left": {
+        "left": { "filter": { "field": "type", "op": "-eq", "value": 4 } },
+        "op": "OR",
+        "right": { "filter": { "field": "type", "op": "-eq", "value": 5 } } },
+      "op": "OR",
+      "right": { "filter": { "field": "type", "op": "-eq", "value": 6 } }
+    }, {
+      "id": "f_publish_qos_2",
+      "description": "Matches publish packets and all packets having QoS == 2",
+      "direction": "Response",
+      "left": { "filter": { "field": "type", "op": "-eq", "value": 3 } },
+      "op": "AND",
+      "right": { "filter": { "field": "QOS", "op": "-eq", "value": 2 } }
+    } ],
+
+
+  "rules": [
+    {
+      "match": "f_connack",
+      "distribution": {
+        "model": "multinomial",
+        "items": [
+          { "strength": 15, "mutators": [ ] },
+          { "strength": 15, "mutators": [ "m_rnd_type", "m_rnd_rem_len" ] },
+          { "strength": 10, "mutators": [ "m_rnd_retcode" ] },
+          { "strength": 10, "mutators": [ "m_rnd_retcode", "m_rnd_type" ] },
+          { "strength": 10, "mutators": [ "m_rnd_retcode", "m_rnd_type", "m_invert_flags_session", "m_invert_flags_dup", "m_invert_flags_retain" ] },
+          { "strength": 5, "mutators": [ "m_incr_flags_qos", "m_invert_flags_dup", "m_invert_flags_session" ] }
+        ] }
+    }, {
+      "match": "f_puback",
+      "mutators": [ "m_incr_type", "m_invert_flags_dup", "m_rnd_rem_len" ]
+    }, {
+      "match": "f_publish_qos_2",
+      "mutators": [ "m_invert_flags_dup", "m_xor_payload" ]
+    } ]
+}

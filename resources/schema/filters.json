@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+
+  "title": "Filters",
+  "description": "Filters to define the matching",
+  "type": "object",
+
+  "definitions": {
+    "filterId": {
+      "id": "#/definitions/filterId",
+      "description": "The unique ID of a matching filter",
+      "type": "string",
+      "pattern": "^f_[A-Za-z]([A-Za-z0-9]|_)*$"
+    },
+    "filterList": {
+      "id": "#/definitions/filterList",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/topLevelFilter"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "topLevelFilter": {
+      "id": "#/definitions/topLevelFilter",
+      "type": "object",
+      "oneOf": [
+        { "required": ["id", "direction", "filter"] },
+        { "required": ["id", "direction", "left", "op", "right"] }
+      ],
+      "properties": {
+        "id": { "$ref": "#/definitions/filterId" },
+        "description": { "type": "string" },
+        "filter": { "$ref": "#/definitions/simpleFilter" },
+        "left": { "$ref": "#/definitions/filter" },
+        "right": { "$ref": "#/definitions/filter" },
+        "op": { "$ref": "operators.json#/definitions/logicalOperator" },
+        "direction": {
+          "type": "string",
+          "enum": ["Request", "Response", "All"]
+        }
+      }
+    },
+    "filter": {
+      "id": "#/definitions/filter",
+      "type": "object",
+      "oneOf": [
+        { "required": ["filter"] },
+        { "required": ["left", "op", "right"] }
+      ],
+      "properties": {
+        "filter": { "$ref": "#/definitions/simpleFilter" },
+        "left": { "$ref": "#/definitions/filter" },
+        "right": { "$ref": "#/definitions/filter" },
+        "op": { "$ref": "operators.json#/definitions/logicalOperator" }
+      }
+    },
+    "simpleFilter": {
+      "id": "#/definitions/simpleFilter",
+      "description": "A simple matching filter",
+      "type": "object",
+      "oneOf": [
+        { "required": ["field", "value", "op"] },
+        { "required": ["field", "enumerated", "op"] }
+      ],
+      "properties": {
+        "field": { "$ref": "fields.json#/definitions/packetTypeField" },
+        "op": { "$ref": "operators.json#/definitions/comparisonOperator" },
+        "enumerated": { "type": "string" },
+        "value": { "type": "integer" }
+      }
+    },
+    "direction": {
+      "id": "#/definitions/direction",
+      "description": "Direction of the message flow: TODO: needs to be defined later on (for now only Client -> Server)",
+      "type": "string",
+      "enum": ["C2S"]
+    }
+  }
+}

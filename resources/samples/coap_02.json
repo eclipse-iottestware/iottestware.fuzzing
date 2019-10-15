@@ -1,0 +1,32 @@
+{
+  "protocolModule": {
+    "protocol": "CoAP",
+    "encoding": "utf-8",
+    "payload": "raw"
+  },
+
+  "generators": [
+    { "id": "g_rand_uniform" },
+    { "id": "g_with_seed", "seed": 123 } ],
+
+  "mutators": [
+    { "id": "m_not_code_0", "field": "code", "unary": "NOT" },
+    { "id": "m_incr_code0", "field": "code", "unary": "INCR" },
+    { "id": "m_xor_code_1", "field": "code", "binary": "XOR", "hex": "0xA5A5" },
+    { "id": "m_xor_code_2", "field": "code", "binary": "AND", "generator": "g_rand_uniform" }
+  ],
+
+  "filters": [
+    {
+      "id": "f_type_rst",
+      "description": "This filter matches all RST messages (CoAP.type == 3)",
+      "direction": "Request",
+      "filter": { "field": "type", "op": "-eq", "value": 3 }
+    } ],
+
+  "rules": [
+    {
+      "match": "f_type_rst",
+      "mutators": [ "m_xor_code_1" ]
+    } ]
+}

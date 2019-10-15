@@ -1,0 +1,51 @@
+{
+  "Test Objective": "Ensure that malformed or invalid length encoded fields in CONNECT control packets do not crash the SUT",
+  "System Under Test": "Broker",
+
+  "protocolModule": {
+    "protocol": "MQTT",
+    "encoding": "utf-8",
+    "payload": "json"
+  },
+
+  "generators": [ { "id": "g_rand_uniform" }, { "id": "g_rand_uniform_2" } ],
+
+
+  "mutators": [
+    { "id": "m_xor_rem_len", "field": "len", "binary": "XOR", "hex": "0xA5A5" },
+    { "id": "m_rnd_rem_len", "field": "len", "binary": "SET", "generator": "g_rand_uniform" },
+
+    { "id": "m_rnd_protoname_len", "field": "length", "binary": "XOR", "generator": "g_rand_uniform" },
+    { "id": "m_incr_protoname_len", "field": "length", "unary": "INCR" },
+    { "id": "m_decr_protoname_len", "field": "length", "unary": "DECR" },
+
+    { "id": "m_rnd_clientid_len", "field": "clientIdlen", "binary": "SET", "generator": "g_rand_uniform_2" }
+  ],
+
+
+  "filters": [
+    {
+      "id": "f_all_connect",
+      "description": "This filter matches all CONNECT control packets",
+      "direction": "Request",
+      "filter": { "field": "type", "op": "-eq", "value": 1 }
+    }
+  ],
+
+
+  "rules": [
+    {
+      "match": "f_all_connect",
+      "distribution": {
+        "model": "multinomial",
+        "items": [
+          { "strength": 2, "mutators": [ "m_xor_rem_len" ] },
+          { "strength": 3, "mutators": [ "m_rnd_protoname_len" ] },
+          { "strength": 3, "mutators": [ "m_rnd_clientid_len" ] },
+          { "strength": 7, "mutators": [ "m_xor_rem_len", "m_incr_protoname_len" ] },
+          { "strength": 7, "mutators": [ "m_xor_rem_len", "m_decr_protoname_len" ] },
+          { "strength": 1, "mutators": [ ] }
+        ] }
+    }
+  ]
+}

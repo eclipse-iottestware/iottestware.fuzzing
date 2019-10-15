@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+
+  "title": "Root Schema",
+  "description": "The root schema defines the configuration of the fuzzer",
+  "type": "object",
+  "required": [ "protocolModule", "generators", "mutators", "filters", "rules" ],
+
+  "properties": {
+    "protocolModule": { "$ref": "protocols.json#/definitions/protocolModule" },
+    "generators": { "$ref": "generators.json#/definitions/generators" },
+    "mutators": { "$ref": "mutators.json#/definitions/mutatorList" },
+    "filters": { "$ref": "filters.json#/definitions/filterList" },
+    "rules": { "$ref": "rules.json#/definitions/rules" }
+  }
+}

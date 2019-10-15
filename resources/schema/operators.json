@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+
+  "title": "Operators",
+  "description": "Different types of operators",
+  "type": "object",
+
+  "definitions": {
+    "comparisonOperator": {
+      "id": "#/definitions/comparisonOperator",
+      "description": "Comparison Operator",
+      "type": "string",
+      "enum": [ "-eq", "-ne", "-gt", "-lt", "-ge", "-le" ]
+    },
+    "logicalOperator": {
+      "id": "#/definitions/logicalOperator",
+      "description": "A logical operator",
+      "type": "string",
+      "enum": [ "AND", "OR" ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+
+  "type": "object",
+
+  "definitions": {
+    "rules": {
+      "id": "#/definitions/rules",
+      "description": "Set of matching rules",
+      "type": "array",
+      "items": { "$ref": "#/definitions/packetTypeRule" },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "packetTypeRule": {
+      "id": "#/definitions/packetTypeRule",
+      "description": "Matches a packet by given packet type",
+      "type": "object",
+      "oneOf": [
+        { "required": ["match", "mutators"] },
+        { "required": ["match", "distribution"] }
+      ],
+      "properties": {
+        "match": { "$ref": "filters.json#/definitions/filterId" },
+        "mutators": { "$ref": "#/definitions/mutators" },
+        "distribution": { "$ref": "#/definitions/distributedMutators" }
+      }
+    },
+    "distributedMutators": {
+      "id": "#/definitions/distributedMutators",
+      "description": "",
+      "type": "object",
+      "required": ["model", "items"],
+      "properties": {
+        "model": { "$ref": "distributions.json#/definitions/distributionModel" },
+        "nxp": { "$ref": "distributions.json#/definitions/numOfExperiments" },
+        "seed": { "type": "integer" },
+        "items": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/distributedMutatorsItem" },
+          "minItems": 2,
+          "uniqueItems": true
+        }
+      }
+    },
+    "distributedMutatorsItem": {
+      "id": "#/definitions/distributedMutatorsItem",
+      "description": "Several sets of mutators with a given distribution",
+      "type": "object",
+      "required": ["strength", "mutators"],
+      "properties": {
+        "mutators": { "$ref": "#/definitions/mutators" },
+        "strength": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "mutators": {
+      "id": "#/definitions/mutators",
+      "description": "List of mutator IDs",
+      "type": "array",
+      "items": { "$ref": "mutators.json#/definitions/mutatorId" },
+      "minItems": 0,
+      "uniqueItems": true
+    }
+  }
+}

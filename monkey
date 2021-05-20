@@ -6,7 +6,7 @@ install() {
   ready=true
 
   # first check if Python3 is installed
-  type Python3 > /dev/null 2>&1 || {
+  type python3 > /dev/null 2>&1 || {
     echo >&2 "Python3 is required but not installed: https://www.python.org/downloads/";
     ready=false;
   }
